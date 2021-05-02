@@ -1,0 +1,11 @@
+
+CREATE TABLE PRODUCT (Product_id VACHAR2(20), Product_name VARCHAR2 (20), Price (>0));
+CREATE TABLE Costumer (Costumer_id VACHAR2(20), Costumer_name VARCHAR2 (20), Costumer_id NUMBER);
+CREATE TABLE Orders (Costumer_id VACHAR2(20), Product_id VACHAR2(20), Quantity NUMBER, Total_amount NUMBER);
+//////////////////////////////////////////////////
+Alert Table PRODUCT ADD Catégorie VARCHAR2 (20) ;
+////////////////////////////////////
+Alert Table ORDERS ADD CONSTRAINT Pk_Catégorie UNIQUE (Catégorie_id) ;
+
+///////////////////////////////////////////
+Alter Table ORDERS ADD OrderDate DATE DEFAULT SYSDATE ;
